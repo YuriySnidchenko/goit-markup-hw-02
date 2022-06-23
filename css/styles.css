@@ -1,0 +1,47 @@
+:root {
+    --main-color: #212121;
+    --secondary-color: #757575;
+    --white-color: #FFFFFF;
+    --btn-color: #2196F3;
+    --bg-gray-color: rgba(245, 244, 250, 1);
+    --bg-black-color: #2F303A;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    background-color: var(--bg-black-color);
+    color: var(--white-color);
+    font-size: 44px;
+}
+
+.main button {
+    background-color: var(--btn-color);
+    color: var(--white-color);
+}
+
+footer {
+    background-color: var(--bg-black-color);
+}
+
+.team {
+    background-color: var(--bg-gray-color);
+}
+
+.team p {
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+.team.photo {
+    height: 260px;
+    width: 270px;
+    border-radius: 0px;
+}
+
+.advantage p {
+    color: var(--secondary-color);
+    font-size: 14px;
+}
