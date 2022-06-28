@@ -1,12 +1,25 @@
 :root {
-    --main-color: #212121;
-    --secondary-color: #757575;
-    --white-color: #FFFFFF;
-    --btn-color: #2196F3;
+    --main-color: rgb(33, 33, 33);
+    --secondary-color: rgb(117, 117, 117);
+    --white-color: rgb(255, 255, 255);
+    --btn-color: rgb(33, 150, 243);
     --btn-secondary-color: #F5F4FA;
-    --btn-secondary-hover: #2196F3;
+    --btn-secondary-hover: rgb(33, 150, 243);
     --bg-gray-color: rgba(245, 244, 250, 1);
-    --bg-black-color: #2F303A;
+    --bg-black-color: rgb(47, 48, 58);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Загалні параметри css */
@@ -18,6 +31,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
+
 
 /* значення для всіх - ul*/
 .list {
@@ -67,17 +81,27 @@ footer a {
 
 .nav-link {
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
+    color: var(--main-color);
 }
 
-.contact.link {
+.nav-link:hover,
+.nav-link:focus {
+    color: rgb(33, 150, 243);
+}
+
+.contact-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #757575;
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: rgb(33, 150, 243);
 }
 
 /* title -  */
@@ -97,7 +121,7 @@ footer a {
     letter-spacing: 0.06em;
     line-height: 1, 36;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
 }
 
 .main-btn {
@@ -110,7 +134,7 @@ footer a {
     text-align: center;
     letter-spacing: 0.06em;
     display: flex;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
 }
 
 /* our project */
@@ -130,7 +154,7 @@ footer a {
 
 /* Приемущества */
 
-.priority-title {
+.section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -151,13 +175,6 @@ footer a {
 /* Блок - команда */
 .team {
     background-color: var(--bg-gray-color);
-}
-
-.team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
 }
 
 .team-name {
@@ -194,7 +211,7 @@ footer {
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    color: #212121;
+    color: rgb(0, 0, 0);
 }
 
 .btn-portfolio:hover,
@@ -203,27 +220,44 @@ footer {
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    color: #FFFFFF;
-    background-color: #2196F3;
-}
-
-.contact-link-footer {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(255, 255, 255);
+    background-color: rgb(33, 150, 243);
 }
 
 .contact-map {
     font-weight: 400;
-    font-size: 14px;
     line-height: 1.71;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
+}
+
+.contact-footer {
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-footer:hover,
+.contact-footer:focus {
+    color: rgb(33, 150, 243);
 }
 
 /* Портфолио main */
 .portfolio {
     width: 370px;
+}
+
+.nav-link-active {
+    color: var(--btn-color);
+}
+
+.nav-link-active {
+    color: var(--btn-color);
+}
+
+/* Активний фільтр */
+.btn-portfolio-active {
+    color: var(--white-color);
+    background-color: var(--btn-color);
 }
 
 .portfolio-title {
