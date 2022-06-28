@@ -212,6 +212,7 @@ footer {
     line-height: 1.62;
     text-align: center;
     color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .btn-portfolio:hover,
@@ -246,6 +247,7 @@ footer {
     width: 370px;
 }
 
+
 .nav-link-active {
     color: var(--btn-color);
 }
@@ -255,6 +257,7 @@ footer {
 }
 
 /* Активний фільтр */
+
 .btn-portfolio-active {
     color: var(--white-color);
     background-color: var(--btn-color);
