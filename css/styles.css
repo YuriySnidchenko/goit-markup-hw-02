@@ -14,8 +14,6 @@ body {
     background-color: var(--white-color);
     color: var(--main-color);
     font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -45,15 +43,18 @@ footer a {
     text-decoration: none;
 }
 
-/*  logo WebStudio */
+/* navigation & logo WebStudio */
 .logo {
     color: var(--main-color);
     font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.20;
 }
 
 .logo:hover,
 .logo:focus {
-    color: green;
+    color: none;
 }
 
 .white {
@@ -64,68 +65,75 @@ footer a {
     color: var(--btn-color);
 }
 
-/* title -  */
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-.main-page {
-    background-color: var(--bg-black-color);
-    color: var(--white-color);
 }
 
+.contact.link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+
+/* title -  */
+
+/* .main-section {
+    background-color: var(--bg-black-color);
+} - хотів накинути background color - через стилі,але чомусь не виходить */
+
 .main-title {
-    font-style: normal;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 44px;
     text-align: center;
     letter-spacing: 0.06em;
+    line-height: 1, 36;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
-.main-page button {
+.main-btn {
     background-color: var(--btn-color);
     color: var(--white-color);
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-}
-
-.main-page button:hover,
-.main-page button:focus {
-    color: blue;
-    background-color: white;
+    display: flex;
+    color: #FFFFFF;
 }
 
 /* our project */
 
-.advantage h3 {
-    font-family: 'Roboto';
-    font-style: normal;
+.advantage-title {
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
-.advantage p {
+.advantage-discription {
     color: var(--secondary-color);
     font-weight: 400;
-    font-size: 14px;
     line-height: 1.7;
-    letter-spacing: 0.03em;
     text-transform: none;
 }
 
 /* Приемущества */
 
-.priority h2 {
+.priority-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 /*
@@ -144,26 +152,26 @@ footer a {
     background-color: var(--bg-gray-color);
 }
 
-.test {
+.team-title {
+    font-weight: 700;
     font-size: 36px;
-    line-height: 1.16px;
+    line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
-.team h3 {
+.team-name {
     font-weight: 500;
     font-size: 16px;
+    text-align: center;
     line-height: 1.19;
-    letter-spacing: 0.03em;
 }
 
-.team p {
+.team-description {
     color: var(--secondary-color);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.19;
-    letter-spacing: 0.03em;
+    text-align: center;
 }
 
 .team.photo {
@@ -180,16 +188,36 @@ footer {
 
 /* portfolio main*/
 /* кнопки*/
-.btn-portfolio:hover,
-.btn-portfolio:focus {
-    color: black;
-    /* тестовый цвет, почему то не принимает значения*/
-
+.btn-portfolio {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    color: #212121;
 }
 
-.header-link:hover,
-.header-link:focus {
-    color: red;
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #2196F3;
+}
+
+.contact-link-footer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-map {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #FFFFFF;
 }
 
 /* Портфолио main */
@@ -197,17 +225,17 @@ footer {
     width: 370px;
 }
 
-.portfolio h2 {
+.portfolio-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
 
-.portfolio p {
+.portfolio-discription {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
-    letter-spacing: 0.03em;
-    color: var(--secondary-color);
+    color: #757575;
+    ;
 }
