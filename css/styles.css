@@ -66,7 +66,6 @@ footer a {
 }
 
 .nav-link {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -75,7 +74,6 @@ footer a {
 }
 
 .contact.link {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -88,8 +86,11 @@ footer a {
     background-color: var(--bg-black-color);
 } - хотів накинути background color - через стилі,але чомусь не виходить */
 
+.bg-main-color {
+    background-color: #2F303A;
+}
+
 .main-title {
-    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 44px;
     text-align: center;
