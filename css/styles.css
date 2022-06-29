@@ -79,6 +79,16 @@ footer a {
     color: var(--btn-color);
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    widght: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 2px solid tmato;
+    /* NAV футер строка под верстку! */
+}
+
 .nav-link {
     font-weight: 500;
     line-height: 1.14;
@@ -111,30 +121,36 @@ footer a {
 } - хотів накинути background color - через стилі,але чомусь не виходить */
 
 .bg-main-color {
+    display: block;
+    text-align: center;
+    height: 600px;
     background-color: #2F303A;
+    /*    outline: 1px solid red; - Линия подчеркивает весь контейнер*/
 }
 
 .main-title {
     font-weight: 900;
     font-size: 44px;
-    text-align: center;
     letter-spacing: 0.06em;
     line-height: 1, 36;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    color: var(--white-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-top: 200px;
 }
 
 .main-btn {
-    background-color: var(--btn-color);
+    min-width: 136px;
+    justify-content: space-around;
     color: var(--white-color);
+    background-color: var(--btn-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
-    display: flex;
-    color: rgb(255, 255, 255);
+    padding: 11px 32px;
+    border-radius: 4px;
 }
 
 /* our project */
@@ -143,6 +159,7 @@ footer a {
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
+    padding-bottom: 10px;
 }
 
 .advantage-discription {
@@ -207,12 +224,49 @@ footer {
 /* portfolio main*/
 /* кнопки*/
 .btn-portfolio {
+    position: absolute;
+    width: 128px;
+    height: 38px;
+    left: 576px;
+    top: 174px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     color: rgb(0, 0, 0);
     cursor: pointer;
+}
+
+.btn-portfolio.web {
+    position: absolute;
+    width: 128px;
+    height: 38px;
+    left: 576px;
+    top: 174px;
+}
+
+.btn-portfolio.app {
+    position: absolute;
+    width: 145px;
+    height: 38px;
+    left: 712px;
+    top: 174px;
+}
+
+.btn-portfolio.design {
+    position: absolute;
+    width: 103px;
+    height: 38px;
+    left: 865px;
+    top: 174px;
+}
+
+.btn-portfolio.marketing {
+    position: absolute;
+    width: 130px;
+    height: 38px;
+    left: 976px;
+    top: 174px;
 }
 
 .btn-portfolio:hover,
@@ -261,6 +315,11 @@ footer {
 .btn-portfolio-active {
     color: var(--white-color);
     background-color: var(--btn-color);
+    position: absolute;
+    width: 73px;
+    height: 38px;
+    left: 495px;
+    top: 174px;
 }
 
 .portfolio-title {
