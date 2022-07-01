@@ -9,19 +9,6 @@
     --bg-black-color: rgb(47, 48, 58);
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 /* Загалні параметри css */
 body {
     background-color: var(--white-color);
@@ -32,12 +19,12 @@ body {
     letter-spacing: 0.03em;
 }
 
-
 /* значення для всіх - ul*/
 .list {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 /* стандарти для всіх заголовків */
@@ -50,6 +37,26 @@ h6,
 p {
     margin: 0;
     padding: 0;
+}
+
+/* Обязательный аттрибут для паддингов */
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* скрывает тег */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 header a,
@@ -79,17 +86,53 @@ footer a {
     color: var(--btn-color);
 }
 
+.header-list {
+    display: flex;
+    margin-left: 93px;
+}
+
+.header-link {
+    display: flex;
+    margin-left: auto;
+    /* автоматично відкудує тег в право*/
+}
+
+.header-list .list {
+    background-color: tomato;
+}
+
+/*.header-list .list:not(:last-child) {
+    margin-right: 40px;
+}*/
+.header-list .list+.list {
+    margin-left: 50px;
+}
+
+.header-link .list+.list {
+    margin-left: 50px;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     widght: 1440px;
     padding-left: 20px;
     padding-right: 20px;
-    outline: 2px solid tmato;
-    /* NAV футер строка под верстку! */
+    outline: 2px solid tOmato;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
-.nav-link {
+.main-nav {
+    display: flex;
+    align-items: center;
+    /* -тег выравнивание контента  justify-content: space-between;*/
+}
+
+.header-list .nav-link {
+    display: block;
+    padding-top: 32;
+    padding-bottom: 352;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -102,6 +145,7 @@ footer a {
 }
 
 .contact-link {
+    margin: auto;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -142,10 +186,8 @@ footer a {
 
 .main-btn {
     min-width: 136px;
-    justify-content: space-around;
     color: var(--white-color);
     background-color: var(--btn-color);
-    font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
@@ -163,19 +205,34 @@ footer a {
 }
 
 .advantage-discription {
-    color: var(--secondary-color);
+    color: var(--secondary-col87 or);
     font-weight: 400;
     line-height: 1.7;
     text-transform: none;
 }
 
+.advantage-padding {
+    justify-content: space-around;
+
+    .header-list .list {
+        background-color: tomato;
+    }
+}
+
 /* Приемущества */
 
 .section-title {
+    display: flex;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
-    text-align: center;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+.img-space {
+    padding-right: 30px;
+    justify-content: space-around;
 }
 
 /*
@@ -183,6 +240,9 @@ footer a {
     border-radius: 50;
 }
 Пробовал разными способами, но что то блокирует заданные параметры */
+.priority-cont {
+    padding-left: 50px;
+}
 
 .pictures-size img {
     /* не пойму как правильно тут сделать !!! почему то не срабатывает */
@@ -192,6 +252,7 @@ footer a {
 /* Блок - команда */
 .team {
     background-color: var(--bg-gray-color);
+    padding-bottom: 50;
 }
 
 .team-name {
@@ -207,12 +268,23 @@ footer a {
     font-weight: 400;
     line-height: 1.19;
     text-align: center;
+    padding-bottom: 94px;
+}
+
+.team-border {
+    width: 260px;
+    height: 108px;
+    border: 1px solid gray;
+    background-color: var(--btn-secondary-color);
+    margin-bottom: 91px;
+
 }
 
 .team.photo {
     height: 260px;
     width: 270px;
     border-radius: 0px;
+    margin-right: 30px;
 }
 
 /* футер */
