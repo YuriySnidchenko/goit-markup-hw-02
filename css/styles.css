@@ -19,14 +19,6 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* значення для всіх - ul*/
-.list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
 /* стандарти для всіх заголовків */
 h1,
 h2,
@@ -35,14 +27,43 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
 }
 
 /* Обязательный аттрибут для паддингов */
-*::before,
-*::after {
+html {
     box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Свойства для корректного отображения картинок */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Свойства для обнуления курсива у address */
+address {
+    font-style: normal;
 }
 
 /* скрывает тег */
@@ -63,6 +84,7 @@ header a,
 footer a {
     text-decoration: none;
 }
+
 
 /* navigation & logo WebStudio */
 .logo {
@@ -86,39 +108,19 @@ footer a {
     color: var(--btn-color);
 }
 
-.header-list {
-    display: flex;
-    margin-left: 93px;
-}
-
-.header-link {
-    display: flex;
-    margin-left: auto;
-    /* автоматично відкудує тег в право*/
-}
-
-.header-list .list {
-    background-color: tomato;
-}
-
-/*.header-list .list:not(:last-child) {
-    margin-right: 40px;
-}*/
-.header-list .list+.list {
-    margin-left: 50px;
-}
-
-.header-link .list+.list {
-    margin-left: 50px;
-}
-
 .container {
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    widght: 1440px;
-    padding-left: 20px;
-    padding-right: 20px;
     outline: 2px solid tOmato;
+    padding: 0 15%;
+    /*
+    padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+.headers>.container {
+    display: flex;
     padding-top: 24px;
     padding-bottom: 25px;
 }
@@ -126,11 +128,25 @@ footer a {
 .main-nav {
     display: flex;
     align-items: center;
-    /* -тег выравнивание контента  justify-content: space-between;*/
+}
+
+/* значення для всіх - ul*/
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* -тег выравнивание контента  justify-content: space-between;}*/
+
+.header-list {
+    display: flex;
+    margin-left: 93px;
 }
 
 .header-list .nav-link {
-    display: block;
     padding-top: 32;
     padding-bottom: 352;
     font-weight: 500;
@@ -139,9 +155,28 @@ footer a {
     color: var(--main-color);
 }
 
+.header-list .list+.list {
+    margin-left: 50px;
+}
+
 .nav-link:hover,
 .nav-link:focus {
     color: rgb(33, 150, 243);
+}
+
+/* наступний блок - контактні данні в Хедері */
+.header-link {
+    display: flex;
+    margin-left: auto;
+    /* автоматично відкудує тег в право*/
+}
+
+/*.header-list .list:not(:last-child) {
+    margin-right: 40px;
+}*/
+
+.header-link .list+.list {
+    margin-left: 50px;
 }
 
 .contact-link {
@@ -158,28 +193,32 @@ footer a {
     color: rgb(33, 150, 243);
 }
 
-/* title -  */
 
+/* title  */
 /* .main-section {
     background-color: var(--bg-black-color);
 } - хотів накинути background color - через стилі,але чомусь не виходить */
+/* Секція пішла */
+.section {
+    outline: 1px solid green;
+}
 
-.bg-main-color {
-    display: block;
+.section.main {
+    padding: 50px;
     text-align: center;
-    height: 600px;
     background-color: #2F303A;
     /*    outline: 1px solid red; - Линия подчеркивает весь контейнер*/
 }
 
 .main-title {
+    width: 696px;
+    margin-left: 50px;
     font-weight: 900;
     font-size: 44px;
     letter-spacing: 0.06em;
-    line-height: 1, 36;
+    line-height: 1.36;
     text-transform: uppercase;
     color: var(--white-color);
-    margin-top: 0;
     margin-bottom: 30px;
     padding-top: 200px;
 }
@@ -193,6 +232,7 @@ footer a {
     letter-spacing: 0.06em;
     padding: 11px 32px;
     border-radius: 4px;
+    text-align: center;
 }
 
 /* our project */
@@ -213,10 +253,6 @@ footer a {
 
 .advantage-padding {
     justify-content: space-around;
-
-    .header-list .list {
-        background-color: tomato;
-    }
 }
 
 /* Приемущества */
@@ -250,7 +286,7 @@ footer a {
 }
 
 /* Блок - команда */
-.team {
+.section.team {
     background-color: var(--bg-gray-color);
     padding-bottom: 50;
 }
