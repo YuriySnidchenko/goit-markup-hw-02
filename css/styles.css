@@ -110,12 +110,10 @@ footer a {
 
 .container {
     width: 1200px;
-    margin: 0;
-    outline: 2px solid tOmato;
-    padding: 0 15;
-    /*
+    margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px;*/
+    padding-right: 15px;
+    outline: 2px solid tOmato;
 }
 
 .headers {
@@ -163,16 +161,12 @@ footer a {
     color: rgb(33, 150, 243);
 }
 
-/* наступний блок - контактні данні в Хедері */
+/*HEADER - контактні данні в Хедері */
 .header-link {
     display: flex;
     margin-left: auto;
     /* автоматично відкудує тег в право*/
 }
-
-/*.header-list .list:not(:last-child) {
-    margin-right: 40px;
-}*/
 
 .header-link .list+.list {
     margin-left: 50px;
@@ -192,37 +186,33 @@ footer a {
     color: rgb(33, 150, 243);
 }
 
-
-/* title  */
-/* .main-section {
-    background-color: var(--bg-black-color);
-} - хотів накинути background color - через стилі,але чомусь не виходить */
-/* Секція пішла */
 .section {
-    outline: 1px solid green;
+    padding: 94px 0;
 }
 
-.section.main {
-    padding: 50px;
+/* HERO  */
+.section.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center;
     background-color: #2F303A;
     /*    outline: 1px solid red; - Линия подчеркивает весь контейнер*/
 }
 
-.main-title {
-    width: 696px;
-    margin-left: 50px;
+.hero-title {
+    width: 694px;
     font-weight: 900;
     font-size: 44px;
     letter-spacing: 0.06em;
     line-height: 1.36;
     text-transform: uppercase;
+    text-align: center;
     color: var(--white-color);
     margin-bottom: 30px;
     padding-top: 200px;
 }
 
-.main-btn {
+.hero-btn {
     min-width: 136px;
     color: var(--white-color);
     background-color: var(--btn-color);
@@ -235,6 +225,13 @@ footer a {
 }
 
 /* our project */
+
+.advantage-main {
+    padding: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
 
 .advantage-title {
     font-weight: 700;
@@ -255,9 +252,15 @@ footer a {
 }
 
 /* Приемущества */
+.container.title {
+    display: flex;
+}
+
+.img-space {
+    display: flex;
+}
 
 .section-title {
-    display: flex;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -266,22 +269,10 @@ footer a {
 }
 
 .img-space {
+    display: flex;
+    padding: 0;
     padding-right: 30px;
-    justify-content: space-around;
-}
-
-/*
-.priority ul>li>img {
-    border-radius: 50;
-}
-Пробовал разными способами, но что то блокирует заданные параметры */
-.priority-cont {
-    padding-left: 50px;
-}
-
-.pictures-size img {
-    /* не пойму как правильно тут сделать !!! почему то не срабатывает */
-    width: 370;
+    justify-content: space-between;
 }
 
 /* Блок - команда */
