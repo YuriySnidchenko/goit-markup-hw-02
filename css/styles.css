@@ -110,16 +110,15 @@ footer a {
 
 .container {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
     outline: 2px solid tOmato;
-    padding: 0 15%;
+    padding: 0 15;
     /*
     padding-left: 15px;
     padding-right: 15px;*/
 }
 
-.headers>.container {
+.headers {
     display: flex;
     padding-top: 24px;
     padding-bottom: 25px;
