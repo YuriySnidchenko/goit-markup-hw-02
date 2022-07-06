@@ -111,15 +111,12 @@ footer a {
 .container {
     width: 1200px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    /*outline: 2px solid tOmato;*/
+    padding: 0 15px;
+    outline: 2px solid tOmato;
 }
 
 .headers {
-    display: flex;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 24px 0;
 }
 
 .main-nav {
@@ -164,6 +161,7 @@ footer a {
 /*HEADER - контактні данні в Хедері */
 .header-link {
     display: flex;
+    align-items: center;
     margin-left: auto;
     /* автоматично відкудує тег в право*/
 }
@@ -192,25 +190,27 @@ footer a {
 
 /* HERO  */
 .section.hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
     text-align: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
     background-color: #2F303A;
     /*    outline: 1px solid red; - Линия подчеркивает весь контейнер*/
 }
 
+.hero-padd {
+    margin: 0 auto;
+    width: 700px;
+}
+
 .hero-title {
-    width: 694px;
     font-weight: 900;
     font-size: 44px;
-    margin-left: 220px;
     letter-spacing: 0.06em;
     line-height: 1.36;
     text-transform: uppercase;
-    text-align: center;
     color: var(--white-color);
     margin-bottom: 30px;
-    padding-top: 200px;
+    outline: 2px teal solid;
 }
 
 .hero-btn {
@@ -222,16 +222,20 @@ footer a {
     letter-spacing: 0.06em;
     padding: 11px 32px;
     border-radius: 4px;
-    text-align: center;
+    border: none;
 }
 
 /* our project */
 
+.advantage {
+    display: flex;
+}
+
 .advantage-main {
     padding: 0px;
     display: flex;
-    flex-wrap: nowrap;
     list-style-type: none;
+    flex-wrap: nowrap;
 }
 
 .advantage-title {
@@ -241,8 +245,13 @@ footer a {
     padding-bottom: 10px;
 }
 
+.advantage-padding:nth-last-child(-n + 4) {
+    margin-right: 30px;
+    width: 270px;
+}
+
 .advantage-discription {
-    color: var(--secondary-col87 or);
+    color: var(--secondary-color);
     font-weight: 400;
     line-height: 1.7;
     text-transform: none;
@@ -250,9 +259,13 @@ footer a {
 
 .advantage-padding {
     justify-content: space-around;
+
 }
 
 /* Приемущества */
+.section.about {
+    padding-top: 0px;
+}
 
 .section-title {
     font-size: 36px;
@@ -263,27 +276,20 @@ footer a {
 
 .pictures-line {
     display: flex;
-}
-
-.img-space {
-    padding-right: 30px;
+    list-style-type: none;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0;
 }
 
 /* Блок - команда */
 .section.team {
     background-color: var(--bg-gray-color);
-    padding-bottom: 50;
 }
 
 .team-list {
     display: flex;
-    list-style-type: none;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    background-color: #F5F4FA;
-    border-radius: 0px 0px 4px 4px;
-    line-height: 1.1;
-
+    justify-content: space-between;
 }
 
 .team-name {
@@ -300,15 +306,18 @@ footer a {
     text-align: center;
 }
 
-.team-border {
+.team-decor {
     width: 270px;
-    height: 100px;
     margin-right: 30px;
     margin-bottom: 30px;
     box-shadow: 0px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.team-border {
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     line-height: 1.1;
+    height: 100px;
 }
 
 .team.photo {
